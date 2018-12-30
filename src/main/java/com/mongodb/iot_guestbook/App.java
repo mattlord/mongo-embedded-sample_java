@@ -52,8 +52,8 @@ public class App {
       /*
        * Initialize the MongoDB Embedded library and create a local storage instance
        *
-       * libraryPath is necessary if the Embedded Java Driver does not pull in native
-       *   MongoDB Embedded SDK libraries for your OS
+       * libraryPath is necessary if the MongoDB Embedded SDK is not in the default
+       * JNI path, or otherwise explicitly specified using java.library.path
        */
       MongoEmbeddedSettings esettings = MongoEmbeddedSettings.builder()
           .libraryPath( "/Users/matt/mongo-embedded-sdk/lib" )
